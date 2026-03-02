@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="utf-8" />
+		<meta name="description" content="Conheça os clientes que já confiaram no Eng. Lamego para transformar a sua presença digital. Mais de 30 projectos entregues em Moçambique." />
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Clientes — Eng. Lamego Desenvolvedor</title>
+		<!-- Google Analytics -->
+	<!-- Substitua G-219YH0NM5Q pelo seu ID em https://analytics.google.com -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-219YH0NM5Q"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-219YH0NM5Q');
+	</script>
+	<link rel="stylesheet" href="ESTILOFINAL.css" />
+</head>
+<body>
+
+	<!-- ========== CABEÇALHO ========== -->
+	<div class="header">
+		<div class="linha">
+			<header style="display:flex; align-items:center; justify-content:space-between; width:100%;">
+				<div style="padding: 0 12px;">
+					<h1 class="logo">ENG <span>LAMEGO</span></h1>
+				</div>
+				<div style="padding: 0 12px;">
+					<nav>
+						<ul class="menu inline sem-marcador">
+							<li><a href="INDEX.HTML" class="ativo">HOME</a></li>
+							<li><a href="CLIENTES.HTML">CLIENTES</a></li>
+							<li><a href="SERVICOS.HTML">SERVIÇOS</a></li>
+							<li><a href="PRECOS.HTML">PREÇOS</a></li>
+							<li><a href="BLOG.HTML" class="ativo">BLOG</a></li>
+							<li><a href="CONTACTOS.HTML">CONTACTOS</a></li>
+							<li><a href="SOBRE.HTML">SOBRE</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+		</div>
+	</div>
+
+	<!-- ========== BANNER ========== -->
+	<div class="page-titulo">
+		<div class="linha">
+			<div style="padding: 0 12px;">
+				<h2>Quem já Confiou no Nosso Trabalho</h2>
+				<p>Empresas e instituições que transformaram a sua presença digital com a nossa ajuda.</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- ========== CONTADOR ANIMADO ========== -->
+	<div class="secao-contador">
+		<div class="linha">
+			<div class="contador-grid">
+				<div class="contador-item">
+					<span class="contador-numero" data-meta="30" data-sufixo="+">0</span>
+					<span class="contador-label">Projectos Entregues</span>
+				</div>
+				<div class="contador-divisor"></div>
+				<div class="contador-item">
+					<span class="contador-numero" data-meta="100" data-sufixo="%">0</span>
+					<span class="contador-label">Clientes Satisfeitos</span>
+				</div>
+				<div class="contador-divisor"></div>
+				<div class="contador-item">
+					<span class="contador-numero" data-meta="5" data-sufixo="+ anos">0</span>
+					<span class="contador-label">Anos de Experiência</span>
+				</div>
+				<div class="contador-divisor"></div>
+				<div class="contador-item">
+					<span class="contador-numero" data-meta="12" data-sufixo=" dias">0</span>
+					<span class="contador-label">Prazo Médio de Entrega</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		// Contador animado — activa quando a secção entra no ecrã
+		function animarContadores() {
+			const numeros = document.querySelectorAll('.contador-numero');
+			numeros.forEach(el => {
+				const meta = parseInt(el.getAttribute('data-meta'));
+				const sufixo = el.getAttribute('data-sufixo') || '';
+				const duracao = 2000;
+				const passos = 60;
+				const intervalo = duracao / passos;
+				let atual = 0;
+				const incremento = meta / passos;
+				const timer = setInterval(() => {
+					atual += incremento;
+					if (atual >= meta) {
+						atual = meta;
+						clearInterval(timer);
+					}
+					el.textContent = Math.floor(atual) + sufixo;
+				}, intervalo);
+			});
+		}
+
+		// Usa IntersectionObserver para activar ao fazer scroll
+		const seccaoContador = document.querySelector('.secao-contador');
+		if (seccaoContador) {
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						animarContadores();
+						observer.disconnect();
+					}
+				});
+			}, { threshold: 0.3 });
+			observer.observe(seccaoContador);
+		}
+	</script>
+
+	<!-- ========== GRID DE CLIENTES ========== -->
+	<div class="linha" style="padding: 25px 0;">
+		<section style="overflow:auto;">
+			<h2 style="padding: 0 12px; border-bottom:2px solid #c9a84c; display:inline-block; margin: 10px 12px 20px;">Portfólio de Clientes</h2>
+
+			<div class="coluna col6">
+				<div class="cliente-card">
+					<img src="IMG/3.PNG" alt="Kuthandizana" />
+					<h4>Kuthandizana, Lda</h4>
+					<p>Site institucional completo com área de serviços, galeria e formulário de contacto. Entregue em 12 dias.</p>
+					<span class="badge">Site Institucional</span>
+					<span class="badge">Identidade Visual</span>
+				</div>
+			</div>
+
+			<div class="coluna col6">
+				<div class="cliente-card">
+					<img src="IMG/JU.JPG" alt="TeteTech" />
+					<h4>Sabores & Servicos da KK's</h4>
+					<p>Criacao de uma identidade visual, Logotipo e cartaz de publicidade.</p>
+					<span class="badge">Logotipo</span>
+					<span class="badge">Cartaz de publicidade</span>
+				</div>
+			</div>
+
+			<div class="coluna col4">
+				<div class="cliente-card">
+					<img src="IMG/CM.PNG" alt="ISPT" />
+					<h4>CM SOLUTIONS</h4>
+					<p>Consultoria na criação de templates para projectos científicos e manuais de formatação académica.</p>
+					<span class="badge">Projectos Científicos</span>
+				</div>
+			</div>
+
+			<div class="coluna col4">
+				<div class="cliente-card">
+					<img src="IMG/CAR.JPG" alt="Moatize Logística" />
+					<h4>Moatize Logística</h4>
+					<p>Redesign completo do site antigo e criação de nova identidade visual para a empresa transportadora.</p>
+					<span class="badge">Redesign</span>
+					<span class="badge">Branding</span>
+				</div>
+			</div>
+
+			<div class="coluna col4">
+				<div class="cliente-card">
+					<img src="img/moz.png" alt="MozData" />
+					<h4>MozData Consulting</h4>
+					<p>Dashboard de análise de dados operacionais e sistema de relatórios mensais automatizados.</p>
+					<span class="badge">Análise de Dados</span>
+					<span class="badge">Dashboard</span>
+				</div>
+			</div>
+
+			<div class="coluna col4">
+				<div class="cliente-card">
+					<img src="img/a.png" alt="Agro Tete" />
+					<h4>Agro Tete, Lda</h4>
+					<p>Criação do site corporativo e estratégia de publicação de conteúdos para redes sociais.</p>
+					<span class="badge">Site Corporativo</span>
+					<span class="badge">Social Media</span>
+				</div>
+			</div>
+
+			<div class="coluna col4">
+				<div class="cliente-card">
+					<img src="img/di.png" alt="Digital Moz" />
+					<h4>Digital Moz Agency</h4>
+					<p>Parceria estratégica para desenvolvimento de sites de clientes da agência com prazos curtos.</p>
+					<span class="badge">Parceria</span>
+					<span class="badge">Web Dev</span>
+				</div>
+			</div>
+
+			<div class="coluna col4">
+				<div class="cliente-card">
+					<img src="img/d.jpg" alt="Excursão Lda" />
+					<h4>David Jr</h4>
+					<p>Criação de Cartaz de publicidade para o seu evento de Churrasco em Moatize.</p>
+					<span class="badge">Churrasco</span>
+					<span class="badge">WhatsApp</span>
+				</div>
+			</div>
+
+		</section>
+	</div>
+
+	<!-- ========== DEPOIMENTOS ========== -->
+	<div class="Conteudo-extra">
+		<div class="linha">
+
+			<div class="coluna col7" style="padding-top:20px; padding-bottom:20px;">
+				<section>
+					<h2>O que Dizem os Nossos Clientes</h2>
+
+					<div class="depoimento">
+						<p>O Eng. Lamego entregou o nosso cartaz de publicidade antes do prazo combinado e com uma qualidade que não esperávamos. A equipe ficou impressionada com o resultado, é exactamente o que precisávamos para atrair mais clientes online. Recomendamos sem hesitar.</p>
+						<cite>David Júnior, Director</cite>
+					</div>
+
+					<div class="depoimento" style="margin-top:20px;">
+						<p>Profissional sério, pontual e com excelente domínio técnico. Os relatórios automatizados que desenvolveu em Excel reduziram o nosso tempo de processamento de dados em quase 60%. Um investimento que valeu muito a pena.</p>
+						<cite>Ana Machava, Gestora Operacional da MozData Consulting</cite>
+					</div>
+
+				</section>
+			</div>
+
+			<div class="coluna col5" style="padding-top:20px; padding-bottom:20px;">
+				<h3 style="border-bottom:2px solid #c9a84c; padding-bottom:8px; margin-bottom:16px;">Estatísticas do Portfólio</h3>
+				<ul class="sem-marcador sem-padding" style="margin-top:10px;">
+					<li style="margin-bottom:18px;">
+						<strong style="font-size:32px; color:#0d1f35; display:block; line-height:1;">+30</strong>
+						<span style="font-size:13px; color:#6b7c93;">Projectos entregues desde 2021</span>
+					</li>
+					<li style="margin-bottom:18px;">
+						<strong style="font-size:32px; color:#0d1f35; display:block; line-height:1;">100%</strong>
+						<span style="font-size:13px; color:#6b7c93;">Taxa de satisfação dos clientes</span>
+					</li>
+					<li style="margin-bottom:18px;">
+						<strong style="font-size:32px; color:#0d1f35; display:block; line-height:1;">12 dias</strong>
+						<span style="font-size:13px; color:#6b7c93;">Prazo médio de entrega de um site</span>
+					</li>
+					<li>
+						<strong style="font-size:32px; color:#0d1f35; display:block; line-height:1;">5+</strong>
+						<span style="font-size:13px; color:#6b7c93;">Anos de experiência em TI e web</span>
+					</li>
+				</ul>
+				<a href="CONTACTOS.HTML" class="botao" style="margin-top:20px;">Quero ser o próximo »</a>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- ========== RODAPÉ ========== -->
+	<div class="footer">
+		<div class="linha">
+			<footer>
+				<div class="coluna col12">
+					<span>&copy; 2026-Eng. Lamego Desenvolvedor Web &amp; Consultor Digital</span>
+					<div class="footer-links">
+						<a href="SOBRE.HTML">Sobre</a>
+						<a href="SERVICOS.HTML">Serviços</a>
+						<a href="CLIENTES.HTML">Clientes</a>
+						<a href="CONTACTOS.HTML">Contactos</a>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+
+
+
+	<!-- ========== BOTÃO FLUTUANTE WHATSAPP ========== -->
+	<div class="whatsapp-flutuante">
+		<span class="whatsapp-tooltip">Fale comigo no WhatsApp</span>
+		<a href="https://wa.me/258848287214?text=Olá%20Eng.%20Lamego%2C%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20seus%20serviços." target="_blank" title="Falar no WhatsApp">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+				<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+			</svg>
+		</a>
+	</div>
+
+</body>
+</html>
