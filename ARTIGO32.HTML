@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Base de Dados Avançado: Modelação, SQL, Normalização e NoSQL — Eng. Lamego</title>
+	<meta name="description" content="Guia avançado sobre bases de dados. Modelação entidade-relacionamento, normalização, SQL avançado, transacções, índices, NoSQL e tendências modernas." />
+	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-219YH0NM5Q"></script>
+	<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-219YH0NM5Q');</script>
+	<link rel="stylesheet" href="ESTILOFINAL.css" />
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5966907573341156" crossorigin="anonymous"></script>
+	<meta name="google-adsense-account" content="ca-pub-5966907573341156">
+</head>
+<body>
+<div class="barra-progresso" id="barra-progresso"></div>
+<div class="header"><div class="linha"><header style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+	<div style="padding:0 12px;"><h1 class="logo">ENG <span>LAMEGO</span></h1></div>
+	<div style="padding:0 12px;"><nav><ul class="menu inline sem-marcador">
+		<li><a href="index.html">HOME</a></li><li><a href="CLIENTES.HTML">CLIENTES</a></li>
+		<li><a href="SERVICOS.HTML">SERVIÇOS</a></li><li><a href="PRECOS.HTML">PREÇOS</a></li>
+		<li><a href="BLOG.HTML" class="ativo">BLOG</a></li><li><a href="SOBRE.HTML">SOBRE</a></li>
+		<li><a href="CONTACTOS.HTML">CONTACTOS</a></li>
+	</ul></nav></div>
+</header></div></div>
+
+<div class="blog-post-header"><div class="linha"><div style="padding:0 12px;">
+	<a href="BLOG.HTML" class="artigo-voltar">← Voltar ao Blog</a>
+	<span class="artigo-categoria-topo">Tecnologia & Educação</span>
+	<h1 style="color:#fff;font-family:'Playfair Display',serif;font-size:34px;max-width:700px;line-height:1.3;margin:0 0 16px;">Base de Dados Avançado: Modelação, SQL, Normalização, Transacções e NoSQL</h1>
+	<div class="blog-post-meta"><span>📅 25 Mar 2026</span><span>⏱ 19 min de leitura</span></div>
+	<div class="artigo-autor">
+		<div class="artigo-autor-avatar">EL</div>
+		<div><span class="artigo-autor-nome">Eng. Lamego</span><span class="artigo-autor-cargo">Desenvolvedor Web & Consultor Digital — Tete, Moçambique</span></div>
+	</div>
+</div></div></div>
+
+<div class="artigo-corpo">
+
+<p>No artigo introdutório sobre <a href="ARTIGO27.HTML">bases de dados</a> explorámos os conceitos fundamentais. Neste artigo vamos aprofundar significativamente: modelação de dados, normalização, SQL avançado, transacções, indexação, optimização de desempenho, bases de dados NoSQL e as tendências que estão a moldar o futuro da gestão de dados. Este é o guia completo para quem quer dominar verdadeiramente as bases de dados.</p>
+
+<blockquote>A arquitectura de uma base de dados é uma das decisões mais duradouras e difíceis de reverter num sistema de software. Uma base de dados bem modelada sustenta décadas de crescimento. Uma mal modelada torna-se uma âncora que atrasa tudo o resto.<cite>Princípio fundamental em engenharia de bases de dados</cite></blockquote>
+
+<h2>Modelação de Dados - Antes de Escrever Uma Linha de Código</h2>
+
+<p>A modelação de dados é o processo de criar uma representação abstracta dos dados que um sistema vai gerir e das relações entre eles. É um passo crítico que acontece antes de qualquer implementação técnica. Uma base de dados bem modelada é intuitiva, eficiente e fácil de manter. Uma mal modelada acumula problemas que se tornam cada vez mais difíceis e caros de corrigir.</p>
+
+<h3>O Modelo Entidade-Relacionamento (ER)</h3>
+<p>O modelo Entidade-Relacionamento é a ferramenta de modelação conceptual mais usada. Representa o mundo real através de três elementos fundamentais: entidades, atributos e relacionamentos.</p>
+
+<p><strong>Entidades</strong> são as "coisas" sobre as quais queremos guardar informação - Cliente, Produto, Encomenda, Funcionário, Factura. Cada entidade tem atributos que a descrevem. A entidade Cliente pode ter os atributos: ID_Cliente, Nome, Email, Telefone, Cidade.</p>
+
+<p><strong>Relacionamentos</strong> descrevem como as entidades se relacionam entre si. Um Cliente faz Encomendas (relação um-para-muitos: um cliente pode fazer muitas encomendas, mas cada encomenda pertence a um único cliente). Uma Encomenda contém Produtos (relação muitos-para-muitos: uma encomenda pode ter vários produtos e um produto pode aparecer em várias encomendas).</p>
+
+<p>A cardinalidade dos relacionamentos - um-para-um (1:1), um-para-muitos (1:N) ou muitos-para-muitos (M:N) - é crucial para a modelação correcta. Os relacionamentos muitos-para-muitos são implementados através de uma tabela intermediária que contém as chaves estrangeiras das duas entidades relacionadas.</p>
+
+<h2>Normalização - O Processo de Eliminar Redundância</h2>
+
+<p>A normalização é o processo de organizar os dados numa base de dados relacional para reduzir a redundância e melhorar a integridade dos dados. É baseada num conjunto de regras chamadas Formas Normais (FN). Vamos explorar as três primeiras, que são as mais importantes na prática.</p>
+
+<h3>Primeira Forma Normal (1FN)</h3>
+<p>Uma tabela está na 1FN quando todos os seus atributos contêm apenas valores atómicos (indivisíveis) e não existem grupos repetidos. Uma tabela com uma coluna "Telefones" que contém "84828-7214, 87828-7214" viola a 1FN porque o valor não é atómico. A solução é criar uma tabela separada de Telefones relacionada com a tabela principal.</p>
+
+<h3>Segunda Forma Normal (2FN)</h3>
+<p>Uma tabela está na 2FN quando está na 1FN e todos os atributos não-chave dependem completamente da chave primária (não apenas de parte dela). Esta forma normal é relevante apenas para tabelas com chave primária composta. Se numa tabela de detalhes de encomenda a coluna Nome_Produto depende apenas do ID_Produto (e não da combinação ID_Encomenda + ID_Produto), existe uma dependência parcial que viola a 2FN.</p>
+
+<h3>Terceira Forma Normal (3FN)</h3>
+<p>Uma tabela está na 3FN quando está na 2FN e não existem dependências transitivas - ou seja, nenhum atributo não-chave depende de outro atributo não-chave. Se numa tabela de Clientes existir a coluna Cidade e a coluna Provincia, e a Provincia puder ser determinada a partir da Cidade, existe uma dependência transitiva. A solução é mover Cidade e Provincia para uma tabela separada de Cidades.</p>
+
+<div class="artigo-destaque">
+<h4>📐 As três primeiras Formas Normais resumidas</h4>
+<ul>
+<li><strong>1FN:</strong> Eliminar grupos repetidos e garantir valores atómicos</li>
+<li><strong>2FN:</strong> Eliminar dependências parciais da chave primária (relevante com chaves compostas)</li>
+<li><strong>3FN:</strong> Eliminar dependências transitivas entre atributos não-chave</li>
+</ul>
+</div>
+
+<h2>SQL Avançado - Para além do SELECT básico</h2>
+
+<p>A maioria dos programadores aprende o SELECT, INSERT, UPDATE e DELETE básicos do SQL. Mas o SQL é uma linguagem muito mais rica, com capacidades que permitem análises e manipulações de dados extremamente sofisticadas.</p>
+
+<h3>JOINs - Combinar dados de múltiplas tabelas</h3>
+<p>Os JOINs são uma das capacidades mais poderosas do SQL. Permitem combinar linhas de duas ou mais tabelas com base numa condição de relacionamento. Os tipos principais são INNER JOIN (devolve apenas as linhas que têm correspondência em ambas as tabelas), LEFT JOIN (devolve todas as linhas da tabela da esquerda e as correspondências da direita, com NULL quando não há correspondência), RIGHT JOIN (o inverso do LEFT JOIN), e FULL OUTER JOIN (devolve todas as linhas de ambas as tabelas, com NULL onde não há correspondência).</p>
+
+<h3>Funções de Agregação e GROUP BY</h3>
+<p>As funções de agregação (COUNT, SUM, AVG, MAX, MIN) combinadas com GROUP BY permitem análises estatísticas poderosas directamente na base de dados. Uma query que calcula as vendas totais por mês, o produto mais vendido por categoria, ou o cliente com maior valor de compras anual, tudo isto é realizável com SQL sem precisar de exportar dados para Excel.</p>
+
+<h3>Subqueries e CTEs</h3>
+<p>As subqueries (consultas dentro de consultas) e as CTEs (Common Table Expressions, introduzidas com WITH) permitem construir consultas complexas de forma modular e legível. Uma CTE define uma consulta temporária com um nome que pode ser referenciada na consulta principal, tornando queries complexas muito mais fáceis de ler e manter.</p>
+
+<h3>Window Functions</h3>
+<p>As Window Functions são uma das funcionalidades mais poderosas do SQL moderno. Permitem calcular valores relativos à posição de cada linha dentro de um conjunto de resultados - como o ranking de um produto nas vendas, a média móvel das últimas N semanas, ou a diferença entre o valor actual e o valor anterior. São essenciais para análise de dados avançada directamente na base de dados.</p>
+
+<h2>Transacções e Propriedades ACID</h2>
+
+<p>Uma transacção é um conjunto de operações que devem ser executadas como uma unidade atómica - ou todas têm sucesso, ou nenhuma é aplicada. As transacções são essenciais para garantir a consistência dos dados, especialmente em sistemas de alta concorrência.</p>
+
+<p>As propriedades ACID definem os requisitos de uma transacção correcta: <strong>Atomicidade</strong> (todas as operações da transacção são executadas ou nenhuma é), <strong>Consistência</strong> (a transacção leva a base de dados de um estado consistente para outro estado consistente), <strong>Isolamento</strong> (transacções concorrentes não interferem entre si), e <strong>Durabilidade</strong> (uma transacção confirmada persiste mesmo em caso de falha do sistema).</p>
+
+<p>O exemplo clássico de transacção é uma transferência bancária: debitar uma conta E creditar outra devem acontecer juntos. Se o débito acontecer mas o sistema falhar antes do crédito, o dinheiro "desaparece". As transacções ACID garantem que isso não acontece.</p>
+
+<h2>Índices - A Chave para o Desempenho</h2>
+
+<p>Um índice é uma estrutura de dados que melhora a velocidade de recuperação de registos numa tabela. É análogo ao índice de um livro: em vez de ler o livro inteiro para encontrar um tema, consultas o índice e saltas directamente para a página certa.</p>
+
+<p>Sem índices, uma consulta que filtra por email numa tabela de 10 milhões de clientes tem de verificar todos os 10 milhões de registos (full table scan). Com um índice na coluna email, a mesma consulta localiza o registo em milissegundos, independentemente do tamanho da tabela.</p>
+
+<p>O custo dos índices é em espaço de armazenamento e na velocidade de operações de escrita (INSERT, UPDATE, DELETE), que têm de manter o índice actualizado. A arte está em criar índices nas colunas certas, as que são mais frequentemente usadas em filtros e JOINs, sem criar índices desnecessários que penalizam as escritas.</p>
+
+<h2>Bases de Dados NoSQL - Quando o Relacional Não Chega</h2>
+
+<p>As bases de dados relacionais são excelentes para a maioria dos casos de uso. Mas existem cenários onde as suas características - esquema rígido, escalabilidade vertical, modelo tabular - representam limitações. As bases de dados NoSQL (Not Only SQL) surgiram para endereçar estes casos.</p>
+
+<h3>Bases de Dados de Documentos (MongoDB, CouchDB)</h3>
+<p>Armazenam dados como documentos JSON ou BSON. São ideais para dados hierárquicos e não uniformes onde a estrutura pode variar entre documentos. Um catálogo de produtos onde cada produto tem atributos diferentes (um telemóvel tem processador, RAM, câmera; uma cadeira tem material, dimensões, cor) é um caso de uso natural para uma base de dados documental.</p>
+
+<h3>Bases de Dados Chave-Valor (Redis, DynamoDB)</h3>
+<p>O modelo mais simples: cada item é identificado por uma chave única e contém um valor opaco. São extremamente rápidas para leituras e escritas simples. O Redis é amplamente usado para caching — guardar em memória os resultados de consultas frequentes para não ter de recalculá-las constantemente na base de dados principal.</p>
+
+<h3>Bases de Dados de Colunas (Apache Cassandra, HBase)</h3>
+<p>Optimizadas para consultas analíticas em grandes volumes de dados. Armazenam os dados por coluna em vez de por linha, o que permite leituras muito eficientes quando só precisamos de algumas colunas de uma tabela com muitas. São usadas em aplicações de Big Data e análise de séries temporais.</p>
+
+<h3>Bases de Dados de Grafos (Neo4j, Amazon Neptune)</h3>
+<p>Modelam os dados como nós (entidades) e arestas (relacionamentos). São ideais para dados altamente conectados onde os relacionamentos são tão importantes quanto os dados em si. Redes sociais, sistemas de recomendação, detecção de fraude e análise de redes de telecomunicações são casos de uso típicos.</p>
+
+<h2>Segurança e Boas Práticas em Bases de Dados</h2>
+
+<p>A segurança de uma base de dados começa no design. O princípio do mínimo privilégio — cada utilizador ou aplicação só tem as permissões estritamente necessárias para a sua função — é fundamental. Uma aplicação web que só precisa de ler dados não deve ter permissão de escrita ou apagar dados.</p>
+
+<p>A injecção SQL (SQL Injection) é uma das vulnerabilidades mais antigas e ainda mais exploradas. Acontece quando dados fornecidos pelo utilizador são incorporados directamente em queries SQL sem sanitização, permitindo ao atacante manipular a query e aceder ou destruir dados. A prevenção é simples: usar sempre queries parametrizadas ou prepared statements, nunca concatenar input do utilizador directamente em queries SQL.</p>
+
+<p>Os backups regulares são a última linha de defesa contra perda de dados — seja por erro humano, ataque de ransomware ou falha de hardware. A regra 3-2-1 é a recomendação padrão: 3 cópias dos dados, em 2 meios diferentes, com 1 cópia offsite (fora do local principal).</p>
+
+<p>Se precisas de ajuda no design, implementação ou optimização de uma base de dados, <a href="CONTACTOS.HTML">entra em contacto comigo</a>.</p>
+
+<div class="artigo-partilha">
+<p>📢 Partilhe com programadores e estudantes de tecnologia!</p>
+<a href="https://wa.me/?text=Guia%20avan%C3%A7ado%20sobre%20Base%20de%20Dados!" target="_blank" class="btn-partilha whatsapp">📱 WhatsApp</a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https://lamegochaphata.github.io/ARTIGO32.HTML" target="_blank" class="btn-partilha facebook">📘 Facebook</a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https://lamegochaphata.github.io/ARTIGO32.HTML" target="_blank" class="btn-partilha linkedin">💼 LinkedIn</a>
+</div>
+
+<div class="artigos-relacionados"><h3>Artigos Relacionados</h3><div class="relacionados-grid">
+<div class="relacionado-card"><span>Tecnologia & Educação</span><h4>O que é um banco de dados e como funciona</h4><a href="ARTIGO27.HTML">Ler artigo »</a></div>
+<div class="relacionado-card"><span>Tecnologia & Educação</span><h4>O que é um algoritmo? Explicação simples</h4><a href="ARTIGO23.HTML">Ler artigo »</a></div>
+<div class="relacionado-card"><span>Tecnologia & Educação</span><h4>Introdução ao Java: o que é e por que aprender</h4><a href="ARTIGO28.HTML">Ler artigo »</a></div>
+</div></div>
+
+<div style="background:linear-gradient(135deg,#0d1f35,#1f3c58);border-radius:12px;padding:32px;text-align:center;margin-top:40px;">
+<h3 style="color:#fff;margin:0 0 10px;font-family:'Playfair Display',serif;font-size:22px;">Precisa de uma base de dados bem desenhada?</h3>
+<p style="color:rgba(255,255,255,0.7);font-size:14px;margin:0 0 20px;">Ofereço design, implementação e optimização de bases de dados para empresas em Moçambique.</p>
+<a href="CONTACTOS.HTML" class="botao" style="background:linear-gradient(135deg,#c9a84c,#a07830);margin:0;">Falar com Eng. Lamego »</a>
+</div>
+
+</div>
+<script>window.addEventListener('scroll',function(){const p=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100;document.getElementById('barra-progresso').style.width=p+'%';});</script>
+<div class="footer"><div class="linha"><footer><div class="coluna col12">
+<span>&copy; 2026 — Eng. Lamego Desenvolvedor Web &amp; Consultor Digital</span>
+<div class="footer-links">
+<a href="SOBRE.HTML">Sobre</a><a href="SERVICOS.HTML">Serviços</a><a href="CLIENTES.HTML">Clientes</a>
+<a href="PRECOS.HTML">Preços</a><a href="BLOG.HTML">Blog</a><a href="CONTACTOS.HTML">Contactos</a><a href="PRIVACIDADE.HTML">Privacidade</a>
+</div></div></footer></div></div>
+<div class="whatsapp-flutuante"><span class="whatsapp-tooltip">Fale comigo no WhatsApp</span>
+<a href="https://wa.me/258848287214" target="_blank">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a></div>
+</body></html>
