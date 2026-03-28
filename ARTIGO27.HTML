@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>O que é um Banco de Dados e Como Ele Funciona — Eng. Lamego</title>
+	<meta name="description" content="Guia completo sobre bancos de dados. O que são, como funcionam, tipos (SQL e NoSQL), linguagem SQL e aplicações práticas para empresas e desenvolvedores em Moçambique." />
+	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-219YH0NM5Q"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-219YH0NM5Q');
+	</script>
+	<link rel="stylesheet" href="ESTILOFINAL.css" />
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5966907573341156" crossorigin="anonymous"></script>
+	<meta name="google-adsense-account" content="ca-pub-5966907573341156">
+</head>
+<body>
+	<div class="barra-progresso" id="barra-progresso"></div>
+	<div class="header"><div class="linha">
+		<header style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+			<div style="padding:0 12px;"><h1 class="logo">ENG <span>LAMEGO</span></h1></div>
+			<div style="padding:0 12px;"><nav><ul class="menu inline sem-marcador">
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="CLIENTES.HTML">CLIENTES</a></li>
+				<li><a href="SERVICOS.HTML">SERVIÇOS</a></li>
+				<li><a href="PRECOS.HTML">PREÇOS</a></li>
+				<li><a href="BLOG.HTML" class="ativo">BLOG</a></li>
+				<li><a href="SOBRE.HTML">SOBRE</a></li>
+				<li><a href="CONTACTOS.HTML">CONTACTOS</a></li>
+			</ul></nav></div>
+		</header>
+	</div></div>
+	<div class="blog-post-header"><div class="linha"><div style="padding:0 12px;">
+		<a href="BLOG.HTML" class="artigo-voltar">← Voltar ao Blog</a>
+		<span class="artigo-categoria-topo">Tecnologia & Educação</span>
+		<h1 style="color:#fff;font-family:'Playfair Display',serif;font-size:34px;max-width:700px;line-height:1.3;margin:0 0 16px;">O que é um Banco de Dados, Como Funciona e Por que É Essencial para Qualquer Negócio Digital</h1>
+		<div class="blog-post-meta"><span>📅 22 Mar 2026</span><span>⏱ 10 min de leitura</span></div>
+		<div class="artigo-autor">
+			<div class="artigo-autor-avatar">EL</div>
+			<div><span class="artigo-autor-nome">Eng. Lamego</span><span class="artigo-autor-cargo">Desenvolvedor Web & Consultor Digital — Tete, Moçambique</span></div>
+		</div>
+	</div></div></div>
+	<div class="artigo-corpo">
+
+		<p>Imagina que tens um negócio com 500 clientes e precisas de encontrar os dados de um cliente específico. Se guardares esses dados em papel, pode demorar minutos ou horas a encontrar. Se os guardares numa folha de Excel, leva alguns segundos. Se os guardares num banco de dados, leva milissegundos mesmo que tenhas não 500 mas 500 milhões de clientes. Esta diferença de velocidade e eficiência é o que torna os bancos de dados fundamentais para qualquer sistema digital moderno.</p>
+
+		<p>Neste artigo vou explicar de forma completa o que é um banco de dados, como funciona, quais os tipos existentes, o que é o SQL e como os bancos de dados são usados em aplicações do dia a dia em Moçambique.</p>
+
+		<blockquote>Um banco de dados bem desenhado é como uma biblioteca perfeitamente organizada, encontras qualquer livro em segundos, mesmo que a biblioteca tenha milhões de volumes.<cite>Analogia clássica em ciências da computação</cite></blockquote>
+
+		<h2>O que é um banco de dados</h2>
+
+		<p>Um banco de dados (ou base de dados) é uma colecção organizada e estruturada de dados que pode ser facilmente acedida, gerida e actualizada. É gerido por um software especializado chamado SGBD - Sistema de Gestão de Bases de Dados (em inglês, DBMS - Database Management System).</p>
+
+		<p>A diferença entre guardar dados num ficheiro simples (como um ficheiro de texto ou uma folha Excel) e num banco de dados é como a diferença entre guardar documentos numa caixa de sapatos e numa secretária com gavetas etiquetadas e bem organizadas. Em ambos os casos os documentos existem, mas a facilidade de acesso, organização e manutenção é completamente diferente.</p>
+
+		<h2>Como funciona um banco de dados relacional</h2>
+
+		<p>O tipo de banco de dados mais comum é o <strong>banco de dados relacional</strong>. Neste modelo, os dados são organizados em tabelas, semelhantes a folhas de cálculo, com linhas e colunas. Cada tabela representa uma entidade (como clientes, produtos ou vendas), cada coluna representa um atributo (como nome, preço ou data) e cada linha representa um registo individual.</p>
+
+		<p>A palavra "relacional" refere-se à capacidade de criar relações entre tabelas. Por exemplo, uma tabela de Vendas pode estar relacionada com a tabela de Clientes (através do ID do cliente) e com a tabela de Produtos (através do ID do produto). Esta estrutura evita duplicação de dados e mantém a consistência.</p>
+
+		<div class="artigo-destaque">
+			<h4>🗃️ As 4 operações fundamentais de um banco de dados (CRUD)</h4>
+			<ul>
+				<li><strong>Create (Criar)</strong> - inserir novos registos na base de dados</li>
+				<li><strong>Read (Ler)</strong> - consultar e pesquisar dados existentes</li>
+				<li><strong>Update (Actualizar)</strong> - modificar dados já existentes</li>
+				<li><strong>Delete (Apagar)</strong> - remover dados da base de dados</li>
+			</ul>
+		</div>
+
+		<h2>O que é o SQL, a linguagem dos bancos de dados</h2>
+
+		<p>SQL (Structured Query Language - Linguagem de Consulta Estruturada) é a linguagem padrão para comunicar com bancos de dados relacionais. Com SQL podes inserir dados, pesquisar registos específicos, actualizar informação e apagar dados usando uma sintaxe próxima do inglês natural.</p>
+
+		<p>Por exemplo, para buscar todos os clientes de Tete numa tabela de clientes, escreveria em SQL algo como: <code>SELECT * FROM clientes WHERE cidade = 'Tete'</code>. Esta simplicidade relativa torna o SQL acessível mesmo para pessoas sem formação avançada em programação, e o torna uma das competências técnicas mais valorizadas no mercado de trabalho em tecnologia.</p>
+
+		<h2>Bancos de dados relacionais vs NoSQL</h2>
+
+		<p><strong>Bancos de dados relacionais</strong> (MySQL, PostgreSQL, Oracle, SQL Server) - ideais para dados estruturados com relações bem definidas. São a escolha certa para sistemas de gestão empresarial, aplicações financeiras e a maioria das aplicações web tradicionais.</p>
+
+		<p><strong>Bancos de dados NoSQL</strong> (MongoDB, Redis, Cassandra) - surgiram para lidar com casos onde os bancos de dados relacionais têm limitações: dados muito grandes e não estruturados, necessidade de escalar para milhões de utilizadores simultâneos, dados em formato de documentos ou grafos. São usados por empresas como Facebook, Google e Amazon para os seus sistemas de maior escala.</p>
+
+		<h2>Bancos de dados em aplicações do quotidiano em Moçambique</h2>
+
+		<p>Cada vez que usas o M-Pesa para transferir dinheiro, um banco de dados regista a transacção, verifica o teu saldo, actualiza as duas contas e guarda o registo para auditoria tudo em menos de um segundo. Quando um médico no Hospital Central de Tete consulta o teu historial clínico, está a aceder a um banco de dados médico. Quando a FAPF em Maputo consulta as notas de um estudante, acede a um banco de dados académico.</p>
+
+		<p>Para pequenas empresas, mesmo um sistema simples de gestão de clientes e vendas usando MySQL ou SQLite já representa uma melhoria enorme em relação a folhas de papel ou ficheiros Excel desorganizados.</p>
+
+		<h2>Segurança nos bancos de dados</h2>
+
+		<p>Os bancos de dados guardam frequentemente informação sensível: dados pessoais de clientes, informação financeira, dados médicos. Proteger esta informação é uma responsabilidade ética e legal. Boas práticas de segurança incluem autenticação e controlo de acesso (cada utilizador só acede ao que precisa), encriptação de dados sensíveis, backups regulares e monitorização de acessos suspeitos.</p>
+
+		<p>A conformidade com regulamentos de protecção de dados, como o Regulamento de Protecção de Dados Pessoais de Moçambique — obriga as empresas a implementar medidas adequadas de segurança nos seus bancos de dados.</p>
+
+		<p>Se queres implementar um sistema de gestão de dados para a tua empresa ou aprender mais sobre bases de dados, <a href="CONTACTOS.HTML">fala comigo</a>.</p>
+
+		<div class="artigo-partilha">
+			<p>📢 Partilhe com quem quer aprender sobre tecnologia!</p>
+			<a href="https://wa.me/?text=Artigo%20interessante%20sobre%20tecnologia!" target="_blank" class="btn-partilha whatsapp">📱 WhatsApp</a>
+			<a href="https://www.facebook.com/sharer/sharer.php?u=https://lamegochaphata.github.io/ARTIGO27.HTML" target="_blank" class="btn-partilha facebook">📘 Facebook</a>
+			<a href="https://www.linkedin.com/sharing/share-offsite/?url=https://lamegochaphata.github.io/ARTIGO27.HTML" target="_blank" class="btn-partilha linkedin">💼 LinkedIn</a>
+		</div>
+		<div class="artigos-relacionados"><h3>Artigos Relacionados</h3><div class="relacionados-grid">
+			<div class="relacionado-card"><span>Tecnologia & Educação</span><h4>O que é um sistema informático e como funciona</h4><a href="ARTIGO25.HTML">Ler artigo »</a></div>
+			<div class="relacionado-card"><span>Tecnologia & Educação</span><h4>Introdução ao Java: o que é e por que aprender</h4><a href="ARTIGO28.HTML">Ler artigo »</a></div>
+			<div class="relacionado-card"><span>Excel & Dados</span><h4>Excel avançado: 5 fórmulas essenciais</h4><a href="ARTIGO11.HTML">Ler artigo »</a></div>
+		</div></div>
+		<div style="background:linear-gradient(135deg,#0d1f35,#1f3c58);border-radius:12px;padding:32px;text-align:center;margin-top:40px;">
+			<h3 style="color:#fff;margin:0 0 10px;font-family:'Playfair Display',serif;font-size:22px;">Quer saber mais sobre tecnologia aplicada ao seu negócio?</h3>
+			<p style="color:rgba(255,255,255,0.7);font-size:14px;margin:0 0 20px;">Fale comigo e descubra como a tecnologia pode transformar a sua empresa em Moçambique.</p>
+			<a href="CONTACTOS.HTML" class="botao" style="background:linear-gradient(135deg,#c9a84c,#a07830);margin:0;">Falar com Eng. Lamego »</a>
+		</div>
+	</div>
+	<script>window.addEventListener('scroll',function(){const p=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100;document.getElementById('barra-progresso').style.width=p+'%';});</script>
+	<div class="footer"><div class="linha"><footer><div class="coluna col12">
+		<span>&copy; 2026 — Eng. Lamego Desenvolvedor Web &amp; Consultor Digital</span>
+		<div class="footer-links">
+			<a href="SOBRE.HTML">Sobre</a><a href="SERVICOS.HTML">Serviços</a><a href="CLIENTES.HTML">Clientes</a>
+			<a href="PRECOS.HTML">Preços</a><a href="BLOG.HTML">Blog</a><a href="CONTACTOS.HTML">Contactos</a><a href="PRIVACIDADE.HTML">Privacidade</a>
+		</div>
+	</div></footer></div></div>
+	<div class="whatsapp-flutuante"><span class="whatsapp-tooltip">Fale comigo no WhatsApp</span>
+		<a href="https://wa.me/258848287214" target="_blank">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a></div>
+</body></html>
