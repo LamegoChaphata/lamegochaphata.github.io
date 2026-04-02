@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="Eng. Lamego — Desenvolvedor web e consultor digital em Tete, Moçambique. Sites profissionais, identidade visual, análise de dados e projectos científicos." />
+	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Eng. Lamego — Desenvolvedor Web & Consultor Digital</title>
+	<!-- Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-219YH0NM5Q"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-219YH0NM5Q');
+	</script>
+	<link rel="stylesheet" href="ESTILOFINAL.css" />
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5966907573341156" crossorigin="anonymous"></script>
+	<meta name="google-adsense-account" content="ca-pub-5966907573341156">
+
+	<style>
+		/* ===== SECÇÕES EXTRA DA HOMEPAGE ===== */
+
+		/* --- Serviços em destaque --- */
+		.secao-servicos {
+			background: #0d1117;
+			padding: 60px 0;
+		}
+		.secao-servicos h2 {
+			color: #c9a84c;
+			font-size: 1.9rem;
+			margin-bottom: 8px;
+		}
+		.secao-servicos .subtitulo {
+			color: #ccc;
+			margin-bottom: 36px;
+			font-size: 1rem;
+		}
+		.grid-servicos {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+			gap: 20px;
+			margin-top: 10px;
+		}
+		.card-servico {
+			background: #161c26;
+			border: 1px solid #2a3040;
+			border-left: 4px solid #c9a84c;
+			border-radius: 6px;
+			padding: 24px 20px;
+			transition: transform 0.2s, box-shadow 0.2s;
+		}
+		.card-servico:hover {
+			transform: translateY(-4px);
+			box-shadow: 0 8px 24px rgba(201,168,76,0.15);
+		}
+		.card-servico .icone {
+			font-size: 2rem;
+			margin-bottom: 12px;
+		}
+		.card-servico h3 {
+			color: #c9a84c;
+			font-size: 1rem;
+			margin-bottom: 8px;
+			text-transform: uppercase;
+			letter-spacing: 0.04em;
+		}
+		.card-servico p {
+			color: #aab;
+			font-size: 0.88rem;
+			line-height: 1.6;
+			margin: 0;
+		}
+
+		/* --- Diferenciais --- */
+		.secao-diferenciais {
+			background: #f5f0e8;
+			padding: 60px 0;
+		}
+		.secao-diferenciais h2 {
+			color: #1a1a1a;
+			font-size: 1.8rem;
+			margin-bottom: 8px;
+		}
+		.secao-diferenciais .subtitulo {
+			color: #555;
+			margin-bottom: 36px;
+		}
+		.grid-diferenciais {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+			gap: 20px;
+		}
+		.card-diferencial {
+			background: #fff;
+			border-radius: 8px;
+			padding: 28px 22px;
+			border-top: 4px solid #c9a84c;
+			box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+			position: relative;
+		}
+		.card-diferencial .numero {
+			position: absolute;
+			top: -18px;
+			left: 22px;
+			width: 36px;
+			height: 36px;
+			background: #c9a84c;
+			color: #fff;
+			font-weight: 700;
+			font-size: 1rem;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.card-diferencial h3 {
+			color: #1a1a1a;
+			font-size: 1rem;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		.card-diferencial p {
+			color: #555;
+			font-size: 0.88rem;
+			line-height: 1.6;
+			margin: 0;
+		}
+
+		/* --- Testemunhos --- */
+		.secao-testemunhos {
+			background: #0d1117;
+			padding: 60px 0;
+		}
+		.secao-testemunhos h2 {
+			color: #c9a84c;
+			font-size: 1.8rem;
+			margin-bottom: 8px;
+		}
+		.secao-testemunhos .subtitulo {
+			color: #ccc;
+			margin-bottom: 36px;
+		}
+		.grid-testemunhos {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+			gap: 20px;
+		}
+		.card-testemunho {
+			background: #161c26;
+			border-radius: 8px;
+			padding: 26px 22px;
+			border-left: 4px solid #c9a84c;
+		}
+		.card-testemunho p {
+			color: #ccc;
+			font-size: 0.9rem;
+			line-height: 1.7;
+			font-style: italic;
+			margin-bottom: 16px;
+		}
+		.card-testemunho .autor {
+			color: #c9a84c;
+			font-weight: 700;
+			font-size: 0.85rem;
+			font-style: normal;
+		}
+		.card-testemunho .cargo {
+			color: #888;
+			font-size: 0.8rem;
+		}
+
+		/* --- CTA Final --- */
+		.secao-cta {
+			background: linear-gradient(135deg, #1a2236 0%, #0d1117 100%);
+			padding: 60px 0;
+			text-align: center;
+			border-top: 3px solid #c9a84c;
+		}
+		.secao-cta h2 {
+			color: #c9a84c;
+			font-size: 2rem;
+			margin-bottom: 14px;
+		}
+		.secao-cta p {
+			color: #ccc;
+			max-width: 600px;
+			margin: 0 auto 28px;
+			font-size: 1rem;
+			line-height: 1.7;
+		}
+		.secao-cta .botoes-cta {
+			display: flex;
+			gap: 14px;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		.botao-cta-primario {
+			background: #c9a84c;
+			color: #0d1117;
+			padding: 13px 30px;
+			border-radius: 4px;
+			font-weight: 700;
+			text-decoration: none;
+			font-size: 0.95rem;
+			transition: background 0.2s;
+		}
+		.botao-cta-primario:hover {
+			background: #e0bc5e;
+		}
+		.botao-cta-secundario {
+			background: transparent;
+			color: #c9a84c;
+			border: 2px solid #c9a84c;
+			padding: 11px 28px;
+			border-radius: 4px;
+			font-weight: 700;
+			text-decoration: none;
+			font-size: 0.95rem;
+			transition: all 0.2s;
+		}
+		.botao-cta-secundario:hover {
+			background: rgba(201,168,76,0.1);
+		}
+
+		/* --- Secção CV --- */
+		.secao-cv {
+			background: #0d1117;
+			padding: 70px 0 60px;
+			border-top: 1px solid #1e2535;
+		}
+		.cv-intro {
+			text-align: center;
+			max-width: 680px;
+			margin: 0 auto 50px;
+			padding: 0 12px;
+		}
+		.cv-intro .badge {
+			display: inline-block;
+			background: rgba(201,168,76,0.12);
+			color: #c9a84c;
+			border: 1px solid rgba(201,168,76,0.3);
+			border-radius: 20px;
+			padding: 5px 16px;
+			font-size: 0.78rem;
+			font-weight: 700;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			margin-bottom: 16px;
+		}
+		.cv-intro h2 {
+			color: #fff;
+			font-size: 1.9rem;
+			margin-bottom: 12px;
+			line-height: 1.3;
+		}
+		.cv-intro h2 span {
+			color: #c9a84c;
+		}
+		.cv-intro p {
+			color: #99a;
+			font-size: 0.97rem;
+			line-height: 1.7;
+		}
+		.cv-dicas-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+			gap: 16px;
+			padding: 0 12px;
+		}
+		.cv-dica {
+			background: #111827;
+			border: 1px solid #1e2a3a;
+			border-radius: 10px;
+			padding: 26px 22px;
+			position: relative;
+			overflow: hidden;
+			transition: transform 0.2s, border-color 0.2s;
+		}
+		.cv-dica:hover {
+			transform: translateY(-3px);
+			border-color: rgba(201,168,76,0.4);
+		}
+		.cv-dica::before {
+			content: '';
+			position: absolute;
+			top: 0; left: 0;
+			width: 100%; height: 3px;
+			background: linear-gradient(90deg, #c9a84c, #e8c96a);
+		}
+		.cv-dica .num {
+			font-size: 2.2rem;
+			font-weight: 900;
+			color: rgba(201,168,76,0.15);
+			line-height: 1;
+			margin-bottom: 10px;
+			font-family: Georgia, serif;
+		}
+		.cv-dica h3 {
+			color: #c9a84c;
+			font-size: 0.95rem;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+			margin-bottom: 10px;
+		}
+		.cv-dica p {
+			color: #aab;
+			font-size: 0.86rem;
+			line-height: 1.65;
+			margin: 0;
+		}
+		.cv-dica .tag-sim {
+			color: #4caf76;
+			font-weight: 700;
+		}
+		.cv-dica .tag-nao {
+			color: #e05555;
+			font-weight: 700;
+		}
+		.cv-alerta {
+			margin: 40px 12px 0;
+			background: linear-gradient(135deg, #1a2236, #111827);
+			border: 1px solid rgba(201,168,76,0.25);
+			border-radius: 10px;
+			padding: 30px 28px;
+			display: flex;
+			align-items: center;
+			gap: 24px;
+			flex-wrap: wrap;
+		}
+		.cv-alerta .alerta-icon {
+			font-size: 2.8rem;
+			flex-shrink: 0;
+		}
+		.cv-alerta .alerta-texto h3 {
+			color: #fff;
+			font-size: 1.1rem;
+			margin-bottom: 6px;
+		}
+		.cv-alerta .alerta-texto p {
+			color: #99a;
+			font-size: 0.88rem;
+			margin: 0;
+			line-height: 1.6;
+		}
+		.cv-alerta .alerta-texto strong {
+			color: #c9a84c;
+		}
+		.cv-cta-btn {
+			margin-left: auto;
+			background: #c9a84c;
+			color: #0d1117;
+			padding: 12px 24px;
+			border-radius: 6px;
+			font-weight: 700;
+			font-size: 0.88rem;
+			text-decoration: none;
+			white-space: nowrap;
+			transition: background 0.2s;
+			flex-shrink: 0;
+		}
+		.cv-cta-btn:hover {
+			background: #e0bc5e;
+		}
+		@media (max-width: 600px) {
+			.cv-alerta { flex-direction: column; }
+			.cv-cta-btn { margin-left: 0; width: 100%; text-align: center; }
+			.cv-intro h2 { font-size: 1.5rem; }
+		}
+
+		/* Título de secção centralizado */
+		.secao-titulo {
+			text-align: center;
+			margin-bottom: 10px;
+		}
+		.separador-dourado {
+			width: 60px;
+			height: 3px;
+			background: #c9a84c;
+			margin: 12px auto 0;
+			border-radius: 2px;
+		}
+
+		@media (max-width: 600px) {
+			.secao-servicos h2,
+			.secao-diferenciais h2,
+			.secao-testemunhos h2,
+			.secao-cta h2 {
+				font-size: 1.4rem;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<!-- ========== CABEÇALHO ========== -->
+	<div class="header">
+		<div class="linha">
+			<header style="display:flex; align-items:center; justify-content:space-between; width:100%;">
+				<div style="padding: 0 12px;">
+					<h1 class="logo">ENG <span>LAMEGO</span></h1>
+				</div>
+				<div style="padding: 0 12px;">
+					<nav>
+						<ul class="menu inline sem-marcador">
+							<li><a href="index.html" class="ativo">HOME</a></li>
+							<li><a href="clientes.html">CLIENTES</a></li>
+							<li><a href="servicos.html">SERVIÇOS</a></li>
+							<li><a href="precos.html">PREÇOS</a></li>
+							<li><a href="blog.html" class="ativo">BLOG</a></li>
+							<li><a href="contactos.html">CONTACTOS</a></li>
+							<li><a href="sobre.html">SOBRE</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+		</div>
+	</div>
+
+	<!-- ========== BANNER HERO ========== -->
+	<div class="page-titulo">
+		<div class="linha">
+			<div style="padding: 0 12px;">
+				<h2>Soluções Digitais que <em style="color:#c9a84c; font-style:normal;">Transformam</em> Negócios</h2>
+				<p>Desenvolvimento web profissional, identidade visual e consultoria estratégica para empresas que querem crescer no ambiente digital.</p>
+				<a href="contactos.html" class="botao" style="margin-top:18px;">Solicitar orçamento »</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- ========== CONTEÚDO PRINCIPAL ========== -->
+	<div class="linha" style="padding: 25px 0;">
+		<section style="overflow:auto;">
+
+			<!-- SIDEBAR: Clientes -->
+			<div class="coluna col3 sidebar">
+				<h3>Clientes Satisfeitos</h3>
+				<ul class="sem-marcador sem-padding">
+					<li><a href="clientes.html">Kuthandizana, Lda</a></li>
+					<li><a href="clientes.html">Sabores & Servicos da KK's</a></li>
+					<li><a href="clientes.html">CM SOLUTIONS</a></li>
+					<li><a href="clientes.html">Moatize Logística</a></li>
+					<li><a href="clientes.html">MozData Consulting</a></li>
+					<li><a href="clientes.html">Agro Tete, Lda</a></li>
+					<li><a href="clientes.html">David Jr</a></li>
+				</ul>
+				<a href="clientes.html" class="botao">Ver todos »</a>
+			</div>
+
+			<!-- DESTAQUE: Último trabalho -->
+			<div class="coluna col9">
+				<h2 style="margin-top:20px;">Último Trabalho: <em style="color:#315e8a; font-style:normal;">Kuthandizana, Lda</em></h2>
+				<div class="obra-destaque">
+					<img src="img/ku.jpeg" alt="Projecto Kuthandizana" />
+					<div class="obra-destaque-info">
+						<p>Desenvolvemos o site institucional completo para a empresa <strong>Kuthandizana, Lda</strong>, incluindo página de serviços, área de contacto, integração com redes sociais e identidade visual adaptada. O projecto foi entregue em 12 dias úteis com aprovação imediata do cliente.</p>
+						<a href="clientes.html" class="botao">Ver outros trabalhos »</a>
+					</div>
+				</div>
+			</div>
+
+		</section>
+	</div>
+
+	<!-- ========== SECÇÃO EXTRA ========== -->
+	<div class="Conteudo-extra">
+		<div class="linha">
+
+			<!-- Artigo principal -->
+			<div class="coluna col7" style="padding-top:20px; padding-bottom:20px;">
+				<section>
+					<h2>Como um Site Pode Ajudar a Sua Empresa?</h2>
+					<p>Num mercado cada vez mais digitalizado, ter presença online deixou de ser uma vantagem, passou a ser uma necessidade. Empresas com sites profissionais geram em média <strong>3x mais contactos</strong> do que aquelas que dependem apenas do passa-palavra ou das redes sociais.</p>
+					<p>Um site bem construído funciona como o seu melhor vendedor: disponível 24 horas por dia, 7 dias por semana, apresentando os seus serviços de forma clara, profissional e convincente. Ele transmite credibilidade, facilita o contacto com potenciais clientes e posiciona a sua marca acima da concorrência.</p>
+					<p>Com mais de 5 anos de experiência em desenvolvimento web e tecnologia da informação, ajudo empresas em Moçambique a construir ou melhorar a sua presença digital com sites rápidos, modernos e adequados ao contexto local.</p>
+					<a href="servicos.html" class="botao">Conheça os meus serviços »</a>
+				</section>
+			</div>
+
+			<!-- Últimas notícias -->
+			<div class="coluna col5" style="padding-top:20px; padding-bottom:20px;">
+				<h3 style="border-bottom:2px solid #c9a84c; padding-bottom:8px; margin-bottom:16px;">Últimas Publicações</h3>
+				<ul class="noticias sem-marcador sem-padding">
+					<li>
+						<img src="img/er.png" alt="Notícia 1" />
+						<div>
+							<h4>5 erros que destroem a credibilidade do seu site</h4>
+							<p>Design desatualizado, textos genéricos e falta de contacto visível... <a href="artigo1.html">Leia mais »</a></p>
+						</div>
+					</li>
+					<li>
+						<img src="img/pme.png" alt="Notícia 2" />
+						<div>
+							<h4>Por que as PME em Tete precisam de um site em 2026</h4>
+							<p>A digitalização chegou ao interior do país e as empresas que não se adaptarem ficarão para trás. <a href="artigo2.html">Leia mais »</a></p>
+						</div>
+					</li>
+					<li>
+						<img src="img/ide.png" alt="Notícia 3" />
+						<div>
+							<h4>O que é identidade visual e por que ela importa</h4>
+							<p>Logo, cores, tipografia: entenda como estes elementos constroem a imagem da sua marca. <a href="artigo3.html">Leia mais »</a></p>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- ========== SERVIÇOS EM DESTAQUE ========== -->
+	<div class="secao-servicos">
+		<div class="linha">
+			<div style="padding: 0 12px;">
+				<div class="secao-titulo">
+					<h2>O Que Posso Fazer por Si</h2>
+					<p class="subtitulo">Soluções completas para potencializar a sua produtividade e destacar-se no mercado</p>
+					<div class="separador-dourado"></div>
+				</div>
+				<div class="grid-servicos" style="margin-top:36px;">
+
+					<div class="card-servico">
+						<div class="icone">🎨</div>
+						<h3>Design Gráfico</h3>
+						<p>Banners, cartões de visita, convites personalizados, logótipos memoráveis e conteúdo visual para redes sociais que comunicam profissionalismo e impacto.</p>
+					</div>
+
+					<div class="card-servico">
+						<div class="icone">🌐</div>
+						<h3>Criação de Sites</h3>
+						<p>Páginas web modernas, responsivas e optimizadas para motores de busca. Do portfólio pessoal ao site institucional completo, com presença digital forte.</p>
+					</div>
+
+					<div class="card-servico">
+						<div class="icone">📚</div>
+						<h3>Apoio Académico</h3>
+						<p>Digitação de trabalhos, projectos de pesquisa, monografias com verificação de plágio, e CVs personalizados que destacam as suas qualificações.</p>
+					</div>
+
+					<div class="card-servico">
+						<div class="icone">🖥️</div>
+						<h3>Suporte Técnico</h3>
+						<p>Activação de Windows, reparação de computadores, actualização de software e instalação de programas. Soluções rápidas para manter os seus dispositivos funcionais.</p>
+					</div>
+
+				</div>
+				<div style="text-align:center; margin-top:36px;">
+					<a href="servicos.html" class="botao">Ver todos os serviços »</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- ========== SECÇÃO CVs ========== -->
+	<div class="secao-cv">
+		<div class="linha">
+			<div class="cv-intro">
+				<div class="badge">✦ Currículo Vitae Profissional</div>
+				<h2>O Seu CV está a <span>custar-lhe</span> oportunidades?</h2>
+				<p>Enviar o mesmo CV para todas as vagas é o erro mais comum e o mais caro. Um CV adaptado e estratégico multiplica as suas hipóteses de ser chamado à entrevista.</p>
+			</div>
+
+			<div class="cv-dicas-grid">
+
+				<div class="cv-dica">
+					<div class="num">01</div>
+					<h3>Leia o anúncio da vaga</h3>
+					<p>Antes de mexer no CV, identifique as <span class="tag-sim">3 competências mais repetidas</span>, os resultados mais valorizados e as palavras-chave do anúncio. Essas são as suas prioridades.</p>
+				</div>
+
+				<div class="cv-dica">
+					<div class="num">02</div>
+					<h3>Adapte o resumo profissional</h3>
+					<p><span class="tag-nao">✗ "Profissional com experiência em várias áreas…"</span> - isto não diz nada.<br><br><span class="tag-sim">✓ "Gestor de projectos com 10 anos na coordenação de equipas…"</span> - isto separa-o dos outros. O primeiro parágrafo define o resto.</p>
+				</div>
+
+				<div class="cv-dica">
+					<div class="num">03</div>
+					<h3>Relevância acima de quantidade</h3>
+					<p>Experiências antigas sem relação com a vaga devem ficar de fora. Regra simples: <span class="tag-sim">Relevância</span> é sempre mais importante que <span class="tag-nao">Quantidade</span>. Um CV mais curto e focado tem mais impacto.</p>
+				</div>
+
+				<div class="cv-dica">
+					<div class="num">04</div>
+					<h3>Use a linguagem do anúncio</h3>
+					<p>Se a vaga diz "gestão de stakeholders", use exactamente essas palavras no seu CV. Com IA a filtrar candidatos por palavras-chave, mudar a expressão pode nem passar da primeira selecção.</p>
+				</div>
+
+				<div class="cv-dica">
+					<div class="num">05</div>
+					<h3>Mostre impacto com números</h3>
+					<p><span class="tag-nao">✗ "Responsável por vendas."</span> - vago demais.<br><br><span class="tag-sim">✓ "Aumentei as vendas em 15% em 6 meses."</span><br><br>Resultados concretos separam-no de todos os outros candidatos.</p>
+				</div>
+
+				<div class="cv-dica">
+					<div class="num">06</div>
+					<h3>O que NÃO fazer</h3>
+					<p><span class="tag-nao">✗</span> Inventar experiência<br>
+					<span class="tag-nao">✗</span> Exagerar números<br>
+					<span class="tag-nao">✗</span> Colocar palavras-chave que não consegue defender na entrevista<br><br>
+					A ideia <strong style="color:#fff;">não é forçar</strong> - <strong style="color:#c9a84c;">é ADAPTAR.</strong></p>
+				</div>
+
+			</div>
+
+			<div class="cv-alerta">
+				<div class="alerta-icon">🎯</div>
+				<div class="alerta-texto">
+					<h3>Precisa de um CV profissional e adaptado?</h3>
+					<p>Crio CVs personalizados que destacam as suas qualificações de forma estratégica e impactante. <strong>Cada CV é feito à medida da vaga - não um modelo genérico.</strong></p>
+				</div>
+				<a href="contactos.html" class="cv-cta-btn">Solicitar o Meu CV »</a>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- ========== DIFERENCIAIS ========== -->
+	<div class="secao-diferenciais">
+		<div class="linha">
+			<div style="padding: 0 12px;">
+				<div class="secao-titulo">
+					<h2>Porquê Escolher-me?</h2>
+					<p class="subtitulo" style="color:#555;">Qualidade, rapidez e personalização em cada projecto</p>
+					<div class="separador-dourado"></div>
+				</div>
+				<div class="grid-diferenciais" style="margin-top:40px;">
+
+					<div class="card-diferencial">
+						<div class="numero">1</div>
+						<h3>Qualidade Excepcional</h3>
+						<p>Cada projecto é executado com elevados padrões de qualidade, utilizando as melhores práticas e ferramentas actuais. A atenção ao pormenor é a garantia da sua satisfação.</p>
+					</div>
+
+					<div class="card-diferencial">
+						<div class="numero">2</div>
+						<h3>Rapidez e Eficiência</h3>
+						<p>Compreendo a importância do tempo. Os meus processos são optimizados para entregar os seus projectos dentro dos prazos acordados, sem comprometer a qualidade.</p>
+					</div>
+
+					<div class="card-diferencial">
+						<div class="numero">3</div>
+						<h3>Atendimento Personalizado</h3>
+						<p>Cada cliente é único. Ofereço soluções à medida, adaptando os serviços às suas necessidades específicas, com comunicação clara e transparente em todas as etapas.</p>
+					</div>
+
+					<div class="card-diferencial">
+						<div class="numero">4</div>
+						<h3>Presença Local em Tete</h3>
+						<p>Baseado em Moatize, Tete, conheço as realidades e necessidades do mercado local. Estou disponível para atendimento presencial e suporte próximo ao cliente.</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- ========== TESTEMUNHOS ========== -->
+	<div class="secao-testemunhos">
+		<div class="linha">
+			<div style="padding: 0 12px;">
+				<div class="secao-titulo">
+					<h2>O Que Dizem os Clientes</h2>
+					<p class="subtitulo">A minha reputação é construída pelos resultados que entrego e pela satisfação de cada cliente</p>
+					<div class="separador-dourado"></div>
+				</div>
+				<div class="grid-testemunhos" style="margin-top:36px;">
+
+					<div class="card-testemunho">
+						<p>"O trabalho de design foi excepcional! Os banners e o cartão de visita superaram as minhas expectativas. Profissionalismo e atenção ao detalhe em cada entrega."</p>
+						<span class="autor">Ana C.</span><br>
+						<span class="cargo">Empresária, Tete</span>
+					</div>
+
+					<div class="card-testemunho">
+						<p>"A ajuda com a minha monografia foi essencial. A digitação foi impecável e a revisão tornou o meu trabalho muito mais sólido. Recomendo vivamente!"</p>
+						<span class="autor">João P.</span><br>
+						<span class="cargo">Estudante Universitário</span>
+					</div>
+
+					<div class="card-testemunho">
+						<p>"A criação do meu site foi rápida e o resultado final é incrível. Finalmente tenho uma presença online que me orgulha e que traz novos clientes."</p>
+						<span class="autor">Mariana S.</span><br>
+						<span class="cargo">Freelancer, Moçambique</span>
+					</div>
+
+				</div>
+				<div style="text-align:center; margin-top:36px;">
+					<a href="clientes.html" class="botao">Ver portfólio de clientes »</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- ========== CTA FINAL ========== -->
+	<div class="secao-cta">
+		<div class="linha">
+			<div style="padding: 0 12px;">
+				<h2>Pronto para Destacar-se?</h2>
+				<p>Entre em contacto hoje mesmo para discutir as suas necessidades e obter um orçamento gratuito e sem compromisso. A sua próxima presença digital começa aqui.</p>
+				<div class="botoes-cta">
+					<a href="contactos.html" class="botao-cta-primario">Solicitar Orçamento Gratuito</a>
+					<a href="precos.html" class="botao-cta-secundario">Ver Preços »</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- ========== RODAPÉ ========== -->
+	<div class="footer">
+		<div class="linha">
+			<footer>
+				<div class="coluna col12">
+					<span>&copy; 2026 — Eng. Lamego Desenvolvedor Web &amp; Consultor Digital</span>
+					<div class="footer-links">
+						<a href="sobre.html">Sobre</a>
+						<a href="servicos.html">Serviços</a>
+						<a href="clientes.html">Clientes</a>
+						<a href="precos.html">Preços</a>
+						<a href="blog.html">Blog</a>
+						<a href="contactos.html">Contactos</a>
+						<a href="privacidade.html">Privacidade</a>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<!-- ========== BOTÃO FLUTUANTE WHATSAPP ========== -->
+	<div class="whatsapp-flutuante">
+		<span class="whatsapp-tooltip">Fale comigo no WhatsApp</span>
+		<a href="https://wa.me/258848287214?text=Olá%20Eng.%20Lamego%2C%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20seus%20serviços." target="_blank" title="Falar no WhatsApp">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+				<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+			</svg>
+		</a>
+	</div>
+
+</body>
+</html>
